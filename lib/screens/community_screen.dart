@@ -79,7 +79,7 @@ class BoardScreen extends StatelessWidget {
                           SizedBox(width: 10),
                           Text(
                             '필독! 비다이닝 서비스 사용 설명서',
-                            style: TextStyle( fontSize: 16),
+                            style: TextStyle(fontSize: 16),
                           ),
                         ],
                       ),
@@ -90,7 +90,26 @@ class BoardScreen extends StatelessWidget {
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                     Expanded(
-                      child: ListView.builder(
+                      child: postsData.items.isEmpty
+                          ? Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.insert_drive_file_outlined,
+                              size: 48,
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text(
+                              'No Posts Yet',
+                              textScaleFactor: 1.5,
+                            ),
+                          ],
+                        ),
+                      )
+                          : ListView.builder(
                         itemCount: postsData.items.length,
                         itemBuilder: (_, i) => Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8.0), // 항목 간 간격
@@ -134,7 +153,30 @@ class BoardScreen extends StatelessWidget {
         child: Icon(Icons.edit),
         backgroundColor: Colors.red,
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.people_outline),
+            label: "같이 먹자",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.thumb_up_outlined),
+            label: '혼밥 최고',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star_outline),
+            label: '메뉴 추천',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle_outlined),
+            label: '마이페이지',
+          ),
+        ],
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: const Color(0xffBF2142),
+        unselectedItemColor: Colors.grey,
+      ),
     );
   }
 }
-

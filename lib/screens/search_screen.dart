@@ -1,4 +1,4 @@
-import 'package:bedining/screens/board_screen.dart';
+import 'package:bedining/screens/community_screen.dart';
 import 'package:bedining/screens/serach_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
