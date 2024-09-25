@@ -6,3 +6,6 @@ It simply implemented a social media community board function
   * Post/Comments CRUD (firebase)
   * Search for posts
   * Alarm (New comment)
+
+## User Screen
+![board_project_image](https://github.com/user-attachments/assets/011ec09f-3340-40ea-9ce7-9f716039ad68)
