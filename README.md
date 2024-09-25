@@ -7,5 +7,5 @@ It simply implemented a social media community board function
   * Search for posts
   * Alarm (New comment)
 
-## User Screen Introduction
+## User Screen Introduction (ONLY social media part)
 ![board_project_image](https://github.com/user-attachments/assets/011ec09f-3340-40ea-9ce7-9f716039ad68)
